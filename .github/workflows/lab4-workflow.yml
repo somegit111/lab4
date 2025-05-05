@@ -19,6 +19,8 @@ jobs:
             registry-url: 'https://npm.pkg.github.com'
         - name: Install Packages
           run: npm install
+        - name: Check npm config
+          run: npm config list
         - env:
             NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           run: npm publish
